@@ -45,8 +45,9 @@ poi compilerà automaticamente tutti i file di documentazione (`spec.md`,
 di confermare.
 
 Al termine crea il branch `develop` ed esegue il commit di configurazione.
-Dalla sessione successiva il processo di inizializzazione viene ignorato
-automaticamente.
+Alla sessione successiva Claude troverà quel commit nel git log, eliminerà
+automaticamente la sezione di inizializzazione da `CLAUDE.md` e la committa.
+Da quel momento il file è pulito e il check non viene più eseguito.
 
 ### 3. Sviluppo iterativo
 
@@ -121,3 +122,5 @@ Claude esegue il merge di `develop` su `main` e crea un tag di versione.
 | Capire il processo di ogni iterazione | `docs/iteration-workflow.md` |
 | Vedere il template per un log di iterazione | `docs/iterations/README.md` |
 | Capire le regole operative dell'AI | `CLAUDE.md` |
+| Vedere cosa è cambiato tra le versioni | `docs/changelog.md` |
+| Consultare i casi di test del progetto | `docs/test-matrix.md` |
