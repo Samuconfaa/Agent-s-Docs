@@ -8,11 +8,19 @@ All'avvio di ogni sessione, eseguire subito:
 git log --oneline
 ```
 
-Se nell'output è presente un commit con messaggio `chore: configure project from template`,
-il progetto è già stato inizializzato. **Ignorare completamente questa sezione** e
-procedere normalmente con le regole operative.
+**Se il commit `chore: configure project from template` è presente**:
+il progetto è già stato inizializzato. Eliminare immediatamente l'intera sezione
+`## Inizializzazione del progetto` da questo file e committarla:
 
-Se quel commit non è presente, il progetto non è ancora stato configurato.
+```
+git add CLAUDE.md
+git commit -m "chore: remove initialization section from CLAUDE.md"
+```
+
+Poi procedere normalmente con le regole operative. Dalla sessione successiva
+questa sezione non esisterà più e il check non verrà mai più eseguito.
+
+**Se il commit non è presente**, il progetto non è ancora stato configurato.
 In questo caso, quando l'utente scrive un messaggio del tipo:
 
 - "iniziamo"
@@ -82,7 +90,9 @@ Una volta che l'utente approva i file:
    ```
 
 Questo commit è il marcatore che indica il progetto come inizializzato.
-Dalla prossima sessione il git log check lo troverà e questa sezione verrà ignorata.
+All'avvio della sessione successiva, Claude troverà questo commit nel git log,
+eliminerà automaticamente questa intera sezione da `CLAUDE.md` e la committa.
+Da quel momento il file sarà pulito e il check non verrà mai più eseguito.
 
 ---
 
