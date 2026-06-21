@@ -1,8 +1,85 @@
 # CLAUDE.md
 
+## Inizializzazione del progetto
+
+<!-- ATTENZIONE: questa sezione è temporanea. Va eliminata completamente
+     da questo file al termine del Passo D, prima del commit iniziale. -->
+
+Quando l'utente clona questo template e scrive un messaggio del tipo:
+
+- "iniziamo"
+- "voglio creare un'app"
+- "partiamo"
+- "ho clonato il template, da dove si comincia?"
+- qualsiasi messaggio che segnala l'avvio di un nuovo progetto
+
+…seguire **nell'ordine** i passi A, B, C e D senza saltarne nessuno.
+
+### Passo A — Raccolta delle informazioni
+
+**Prima**: chiedere all'utente di descrivere liberamente il progetto con parole sue,
+senza fare ancora domande. Attendere la sua panoramica.
+
+**Poi**: sulla base di quanto scritto, fare domande mirate per colmare le lacune
+o chiarire le ambiguità. Le aree da coprire prima di procedere sono:
+
+- Nome del progetto e problema che risolve
+- Utente target e contesto d'uso
+- Funzionalità principali (obbligatorie) e secondarie (opzionali)
+- Linguaggio e framework scelti
+- API esterne coinvolte, se presenti
+- Vincoli: tempo, piattaforma target, complessità massima
+- Natura del progetto: didattico, prototipo o produzione
+
+Non fare tutte le domande in una volta se la panoramica dell'utente ne copre già alcune.
+Chiedere solo ciò che manca o che è rimasto ambiguo.
+Non procedere al Passo B finché tutte le aree non sono chiare.
+
+### Passo B — Compilazione dei file
+
+Con le risposte ricevute, compilare nell'ordine:
+
+1. `docs/spec.md` — sostituire tutti i placeholder con le informazioni del progetto
+2. `docs/architecture.md` — compilare le scelte di pattern, layer e tecnologie
+3. `docs/plan.md` — definire le iterazioni in base alle funzionalità dichiarate
+4. `docs/api-notes.md` — compilare solo se sono presenti API esterne già note;
+   altrimenti eliminare il file
+5. Questo file (`CLAUDE.md`) — compilare le sezioni "Contesto del progetto"
+   e "Scelte tecniche" con i dati reali del progetto
+
+Regole per la compilazione:
+- Sostituire ogni placeholder (`[...]`) con i dati reali.
+- Rimuovere tutti i commenti HTML `<!-- -->` dei template.
+- Adattare gli esempi al progetto reale, non lasciarli come riferimento generico.
+- Se una sezione non è applicabile al progetto, eliminarla.
+
+### Passo C — Approvazione
+
+Mostrare all'utente un riepilogo dei file compilati e chiedere conferma esplicita.
+Se l'utente richiede correzioni, applicarle e ripresentare il riepilogo.
+Non procedere al Passo D senza approvazione esplicita.
+
+### Passo D — Setup git e pulizia
+
+Una volta che l'utente approva i file:
+
+1. Creare il branch `develop`:
+   ```
+   git branch develop
+   ```
+2. Eliminare **questa intera sezione** `## Inizializzazione del progetto`
+   da questo file. Il progetto è configurato e la sezione non serve più.
+3. Committare la configurazione iniziale:
+   ```
+   git add .
+   git commit -m "chore: configure project from template"
+   ```
+
+---
+
 ## Contesto del progetto
 
-<!-- Compilare questa sezione all'inizio del progetto e mantenerla aggiornata.
+<!-- Compilare questa sezione durante l'inizializzazione (Passo B).
      Descrivere cosa fa l'app e l'obiettivo principale di sviluppo.
      Non descrivere la tecnologia qui: quella va in "Scelte tecniche". -->
 
