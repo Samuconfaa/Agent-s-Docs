@@ -102,6 +102,7 @@ Indicare se si tratta di un progetto didattico, di produzione, di prototipo, ecc
 - Note sulle API esterne: `docs/api-notes.md`
 - Log delle iterazioni: `docs/iterations/` — il file `docs/iterations/README.md` contiene il template da seguire per ogni nuova iterazione
 - **Workflow iterazioni: `docs/iteration-workflow.md` — da seguire obbligatoriamente ogni volta che l'utente richiede una nuova iterazione**
+- Prompt disponibili e azioni che attivano: `docs/prompt-guide.md`
 
 ---
 
