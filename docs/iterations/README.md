@@ -140,15 +140,17 @@
 
 ## Test eseguiti
 
-<!-- Elencare i test manuali eseguiti.
+<!-- Copiare gli ID dei test da docs/test-matrix.md per questa funzionalità.
+     Se mancano, aggiungerli prima alla matrice e poi riportarli qui.
      Usare tre stati: ✅ superato / ❌ fallito / ⏭ saltato (con motivazione)
-     Non marcare un test come superato senza averlo effettivamente eseguito. -->
+     Non marcare un test come superato senza averlo effettivamente eseguito.
+     Aggiornare l'esito anche in docs/test-matrix.md al termine. -->
 
 ### Funzionalità principali
 
-- [ ] **[TC-01]** [Descrizione del test] → [esito e note]
-- [ ] **[TC-02]** [Descrizione del test] → [esito e note]
-- [ ] **[TC-03]** [Descrizione del test] → [esito e note]
+- [ ] **[TC-FX-01]** [Descrizione del test] → [esito e note]
+- [ ] **[TC-FX-02]** [Descrizione del test] → [esito e note]
+- [ ] **[TC-FX-03]** [Descrizione del test] → [esito e note]
 
 ### Casi limite
 
@@ -160,7 +162,7 @@
 
 ### Regressioni verificate
 
-<!-- Verificare che le funzionalità delle iterazioni precedenti non siano state rotte. -->
+<!-- Eseguire tutti i TC-REG-* presenti in docs/test-matrix.md e aggiornarne l'esito. -->
 
 - [ ] [Funzionalità esistente 1] — funziona ancora correttamente
 - [ ] [Funzionalità esistente 2] — funziona ancora correttamente

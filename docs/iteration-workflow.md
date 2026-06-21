@@ -78,6 +78,10 @@ che la funzionalità funzioni:
 - quali risultati attendersi per ogni azione
 - quali casi limite testare e come
 
+I casi da verificare sono quelli documentati in `docs/test-matrix.md` per questa
+funzionalità. Se non sono ancora presenti, aggiungerli alla matrice prima di
+procedere con i test.
+
 Includere sempre almeno:
 
 - il caso normale (happy path)
@@ -93,8 +97,8 @@ git commit -m "<tipo>(<scope>): <descrizione>"
 
 ### Verifica delle regressioni
 
-Prima di procedere, verificare che le funzionalità implementate nelle iterazioni
-precedenti funzionino ancora correttamente. Indicare all'utente quali aree
+Prima di procedere, eseguire tutti i test contrassegnati come `TC-REG-*` in
+`docs/test-matrix.md` e aggiornarne l'esito. Indicare all'utente quali aree
 testare in base alle modifiche apportate.
 
 ---
@@ -159,6 +163,7 @@ Completare il file `docs/iterations/it-XX.md`:
 
 Aggiornare gli altri file di documentazione coinvolti:
 
+- `docs/test-matrix.md` — aggiungere i nuovi casi di test alla sezione della funzionalità e aggiornare lo storico degli esiti
 - `docs/architecture.md` — se è stata presa una decisione architetturale rilevante
 - `docs/api-notes.md` — se è stata integrata o modificata una API esterna
 - `docs/spec.md` — solo se lo scope è cambiato (con motivazione esplicita)
