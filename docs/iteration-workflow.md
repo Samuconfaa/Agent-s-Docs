@@ -164,6 +164,7 @@ Completare il file `docs/iterations/it-XX.md`:
 Aggiornare gli altri file di documentazione coinvolti:
 
 - `docs/test-matrix.md` — aggiungere i nuovi casi di test alla sezione della funzionalità e aggiornare lo storico degli esiti
+- `docs/changelog.md` — aggiungere le modifiche rilevanti nella sezione [Non rilasciato]
 - `docs/architecture.md` — se è stata presa una decisione architetturale rilevante
 - `docs/api-notes.md` — se è stata integrata o modificata una API esterna
 - `docs/spec.md` — solo se lo scope è cambiato (con motivazione esplicita)
@@ -175,3 +176,20 @@ Eseguire il commit di documentazione sul branch `develop`:
 git add docs/
 git commit -m "docs: aggiornata documentazione iterazione XX"
 ```
+
+---
+
+## Al momento del rilascio su main
+
+Quando si promuove `develop` su `main`, aggiornare `docs/changelog.md`:
+
+1. Rinominare la sezione `[Non rilasciato]` con il numero di versione e la data:
+   ```
+   ## [1.0.0] — AAAA-MM-GG
+   ```
+2. Aggiungere una nuova sezione `[Non rilasciato]` vuota in cima.
+3. Committare su `develop` prima del merge:
+   ```
+   git add docs/changelog.md
+   git commit -m "docs: release changelog v1.0.0"
+   ```

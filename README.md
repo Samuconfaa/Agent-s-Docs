@@ -94,6 +94,7 @@ Claude esegue il merge di `develop` su `main` e crea un tag di versione.
     ├── iteration-workflow.md    ← processo passo-passo per ogni iterazione
     ├── prompt-guide.md          ← prompt disponibili e cosa attivano
     ├── test-matrix.md           ← tutti i casi di test manuali del progetto
+    ├── changelog.md             ← registro delle versioni rilasciate
     └── iterations/
         ├── README.md            ← template per i log di iterazione
         ├── it-01.md             ← log iterazione 1 (creato durante lo sviluppo)

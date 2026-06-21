@@ -338,6 +338,7 @@ Dopo ogni iterazione significativa, aggiornare **obbligatoriamente**:
 - `docs/architecture.md` — se è stata presa una decisione architetturale rilevante
 - `docs/spec.md` — solo se lo scope è cambiato (con motivazione esplicita)
 - `docs/plan.md` — se il piano delle iterazioni è stato revisionato
+- `docs/changelog.md` — aggiornare la sezione [Non rilasciato] con le modifiche dell'iterazione; spostarla in una versione numerata solo al momento del rilascio su `main`
 
 ---
 
