@@ -2,10 +2,18 @@
 
 ## Inizializzazione del progetto
 
-<!-- ATTENZIONE: questa sezione è temporanea. Va eliminata completamente
-     da questo file al termine del Passo D, prima del commit iniziale. -->
+All'avvio di ogni sessione, eseguire subito:
 
-Quando l'utente clona questo template e scrive un messaggio del tipo:
+```
+git log --oneline
+```
+
+Se nell'output è presente un commit con messaggio `chore: configure project from template`,
+il progetto è già stato inizializzato. **Ignorare completamente questa sezione** e
+procedere normalmente con le regole operative.
+
+Se quel commit non è presente, il progetto non è ancora stato configurato.
+In questo caso, quando l'utente scrive un messaggio del tipo:
 
 - "iniziamo"
 - "voglio creare un'app"
@@ -59,7 +67,7 @@ Mostrare all'utente un riepilogo dei file compilati e chiedere conferma esplicit
 Se l'utente richiede correzioni, applicarle e ripresentare il riepilogo.
 Non procedere al Passo D senza approvazione esplicita.
 
-### Passo D — Setup git e pulizia
+### Passo D — Setup git
 
 Una volta che l'utente approva i file:
 
@@ -67,13 +75,14 @@ Una volta che l'utente approva i file:
    ```
    git branch develop
    ```
-2. Eliminare **questa intera sezione** `## Inizializzazione del progetto`
-   da questo file. Il progetto è configurato e la sezione non serve più.
-3. Committare la configurazione iniziale:
+2. Committare la configurazione iniziale con il messaggio esatto che funge da sentinel:
    ```
    git add .
    git commit -m "chore: configure project from template"
    ```
+
+Questo commit è il marcatore che indica il progetto come inizializzato.
+Dalla prossima sessione il git log check lo troverà e questa sezione verrà ignorata.
 
 ---
 
