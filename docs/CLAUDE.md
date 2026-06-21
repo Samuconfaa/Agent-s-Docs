@@ -17,20 +17,23 @@ Quando l'utente clona questo template e scrive un messaggio del tipo:
 
 ### Passo A — Raccolta delle informazioni
 
-Inviare all'utente **in un unico messaggio** le seguenti domande.
-Non procedere prima di aver ricevuto le risposte a tutte.
+**Prima**: chiedere all'utente di descrivere liberamente il progetto con parole sue,
+senza fare ancora domande. Attendere la sua panoramica.
 
-1. Come si chiama il progetto e cosa fa, in una frase?
-2. Chi lo usa e in quale contesto d'uso?
-3. Quali sono le 3–5 funzionalità principali che deve avere?
-4. Ci sono funzionalità secondarie o opzionali?
-5. Quale linguaggio e framework vuoi usare?
-6. L'app si appoggia ad API esterne? Se sì, quali conosci già?
-7. Quali vincoli ci sono? (tempo disponibile, piattaforma target, complessità massima, ecc.)
-8. È un progetto didattico, un prototipo o qualcosa destinato a essere usato in produzione?
+**Poi**: sulla base di quanto scritto, fare domande mirate per colmare le lacune
+o chiarire le ambiguità. Le aree da coprire prima di procedere sono:
 
-Se le risposte sono vaghe, incomplete o contraddittorie, fare domande di chiarimento
-prima di procedere al Passo B. Non compilare i file con informazioni incerte.
+- Nome del progetto e problema che risolve
+- Utente target e contesto d'uso
+- Funzionalità principali (obbligatorie) e secondarie (opzionali)
+- Linguaggio e framework scelti
+- API esterne coinvolte, se presenti
+- Vincoli: tempo, piattaforma target, complessità massima
+- Natura del progetto: didattico, prototipo o produzione
+
+Non fare tutte le domande in una volta se la panoramica dell'utente ne copre già alcune.
+Chiedere solo ciò che manca o che è rimasto ambiguo.
+Non procedere al Passo B finché tutte le aree non sono chiare.
 
 ### Passo B — Compilazione dei file
 
