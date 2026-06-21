@@ -201,16 +201,6 @@ motivazione esplicita.
 | `main` | Versione ufficiale rilasciata. Ogni commit su `main` rappresenta una release stabile consegnabile. | Solo merge da `develop` a milestone raggiunte |
 | `develop` | Integrazione continua del lavoro. Contiene tutte le iterazioni completate. | Solo merge da branch di iterazione |
 
-**Setup iniziale del progetto** (eseguire una sola volta):
-
-```
-git init
-git commit --allow-empty -m "chore: init repository"
-git branch develop
-```
-
-Da questo momento `main` e `develop` esistono entrambi. Tutto il lavoro ordinario avviene su `develop` e i suoi branch figli.
-
 **Ciclo di vita di ogni iterazione**:
 
 ```
@@ -380,5 +370,5 @@ Un'iterazione è completa solo quando tutte queste condizioni sono vere:
 - [ ] Nessuna credenziale o dato sensibile è nel codice committato
 - [ ] Il codice è stato letto e compreso dopo la generazione
 - [ ] Nessuna regressione nelle funzionalità esistenti
-- [ ] Il branch è unito a `main` con commit semantico corretto
+- [ ] Il branch è unito a `develop` con commit semantico corretto
 - [ ] `docs/iterations/it-XX.md` è compilato e aggiornato

@@ -181,15 +181,40 @@ git commit -m "docs: aggiornata documentazione iterazione XX"
 
 ## Al momento del rilascio su main
 
-Quando si promuove `develop` su `main`, aggiornare `docs/changelog.md`:
+Quando l'utente segnala che il progetto è pronto per il rilascio, eseguire
+nell'ordine:
 
-1. Rinominare la sezione `[Non rilasciato]` con il numero di versione e la data:
-   ```
-   ## [1.0.0] — AAAA-MM-GG
-   ```
-2. Aggiungere una nuova sezione `[Non rilasciato]` vuota in cima.
-3. Committare su `develop` prima del merge:
-   ```
-   git add docs/changelog.md
-   git commit -m "docs: release changelog v1.0.0"
-   ```
+### 1. Aggiornare il changelog su develop
+
+Rinominare la sezione `[Non rilasciato]` con numero di versione e data,
+aggiungere una nuova sezione `[Non rilasciato]` vuota in cima, poi committare:
+
+```
+git checkout develop
+git add docs/changelog.md
+git commit -m "docs: release changelog v[X.Y.Z]"
+```
+
+### 2. Merge su main
+
+```
+git checkout main
+git merge --no-ff develop -m "release: v[X.Y.Z] — [descrizione sintetica]"
+```
+
+### 3. Tag della versione
+
+```
+git tag v[X.Y.Z]
+```
+
+### 4. Torna su develop
+
+```
+git checkout develop
+```
+
+Il numero di versione segue Semantic Versioning (`MAJOR.MINOR.PATCH`):
+- `MAJOR`: cambiamento incompatibile con le versioni precedenti
+- `MINOR`: nuova funzionalità compatibile
+- `PATCH`: correzione di bug compatibile
