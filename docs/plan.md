@@ -43,24 +43,13 @@ incrementali, ognuna consegnabile e verificabile in modo autonomo.
 ProjectRoot/
 ├── .git/
 ├── .gitignore
-├── [NomeProgetto].[ext]       ← file di progetto / solution
 ├── src/
-│   └── [NomeProgetto]/
-│       ├── Models/
-│       ├── DTOs/
-│       ├── Services/
-│       │   ├── Interfaces/
-│       │   └── Impl/
-│       ├── Repositories/
-│       │   ├── Interfaces/
-│       │   └── Impl/
-│       ├── ViewModels/
-│       ├── Views/
-│       ├── Helpers/
-│       └── Config/
-├── tests/
-│   ├── Unit/
-│   └── Integration/
+│   ├── api/          ← backend / API REST o GraphQL
+│   ├── web/          ← frontend / sito web
+│   ├── mobile/       ← app mobile
+│   ├── worker/       ← processi in background, job, queue
+│   └── shared/       ← codice condiviso tra più servizi
+│       (creare solo le cartelle effettivamente necessarie)
 ├── docs/
 │   ├── spec.md
 │   ├── plan.md               ← questo file

@@ -85,19 +85,22 @@ cambia. Un'architettura documentata solo all'inizio e non aggiornata è fuorvian
 ```
 ProjectRoot/
 ├── src/
-│   └── [NomeProgetto]/
-│       ├── Models/           ← Strutture dati pure (entità di dominio)
-│       ├── DTOs/             ← Oggetti di trasferimento dati (risposta API, storage)
-│       ├── Services/
-│       │   ├── Interfaces/   ← Contratti dei servizi (interfacce/protocolli)
-│       │   └── Impl/         ← Implementazioni concrete
-│       ├── Repositories/
-│       │   ├── Interfaces/
-│       │   └── Impl/
-│       ├── ViewModels/       ← (o Controllers, Presenters, a seconda del pattern)
-│       ├── Views/            ← (o Screens, Pages, Components)
-│       ├── Helpers/          ← Utilità condivise senza stato
-│       └── Config/           ← Costanti, configurazione, DI setup
+│   ├── api/                  ← backend / API REST o GraphQL
+│   │   ├── Models/
+│   │   ├── Services/
+│   │   ├── Repositories/
+│   │   └── Config/
+│   ├── web/                  ← frontend / sito web
+│   │   ├── Components/
+│   │   ├── Pages/
+│   │   └── Services/
+│   ├── mobile/               ← app mobile
+│   │   ├── ViewModels/
+│   │   ├── Views/
+│   │   └── Services/
+│   ├── worker/               ← processi in background, job, queue
+│   └── shared/               ← modelli, tipi e utilità condivisi tra servizi
+│       (creare solo le cartelle effettivamente necessarie al progetto)
 ├── tests/
 │   ├── Unit/
 │   └── Integration/

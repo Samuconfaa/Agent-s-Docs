@@ -161,6 +161,29 @@ Quando l'utente scrive un messaggio del tipo:
 `docs/iteration-workflow.md`. Non saltare né riordinare i passi senza
 motivazione esplicita.
 
+### Struttura del codice
+
+Tutto il codice sorgente va nella cartella `src/` alla root del progetto.
+All'interno di `src/` ogni servizio o componente autonomo ha la propria cartella:
+
+```
+src/
+├── api/          ← backend / API REST o GraphQL
+├── web/          ← frontend / sito web
+├── mobile/       ← app mobile
+├── worker/       ← processi in background, job, queue
+├── shared/       ← codice condiviso tra più servizi (modelli, utilità, tipi)
+└── [altro]/      ← qualsiasi altro servizio specifico del progetto
+```
+
+Regole:
+- Creare solo le cartelle effettivamente necessarie per il progetto in corso.
+  Non creare cartelle vuote "per il futuro".
+- Ogni cartella di servizio è autonoma: ha le proprie dipendenze, configurazione
+  e struttura interna coerente con il linguaggio e framework scelti per quel servizio.
+- Il codice condiviso tra più servizi va in `src/shared/`, mai duplicato.
+- Nessun file di codice va depositato direttamente nella root o in `docs/`.
+
 ### Prima di qualsiasi modifica
 
 - **Proporre sempre un piano** prima di modifiche che toccano più di un file.
