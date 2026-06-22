@@ -57,10 +57,15 @@ Con le risposte ricevute, compilare nell'ordine:
 
 1. `docs/spec.md` — sostituire tutti i placeholder con le informazioni del progetto
 2. `docs/architecture.md` — compilare le scelte di pattern, layer e tecnologie
-3. `docs/plan.md` — definire le iterazioni in base alle funzionalità dichiarate
-4. `docs/api-notes.md` — compilare solo se sono presenti API esterne già note;
+3. `docs/plan.md` — definire le iterazioni necessarie a completare l'MVP
+4. `docs/iterations/it-01.md`, `it-02.md`, … `it-XX.md` — creare un file per ogni
+   iterazione definita in `plan.md`, copiando la struttura da `docs/iterations/README.md`
+   e compilando per ciascuna: obiettivo, piano (file da creare/modificare), rischi e
+   dipendenze. La sezione "Implementazione" e le successive vanno lasciate vuote:
+   verranno compilate durante lo sviluppo effettivo di ogni iterazione.
+5. `docs/api-notes.md` — compilare solo se sono presenti API esterne già note;
    altrimenti eliminare il file
-5. Questo file (`CLAUDE.md`) — compilare le sezioni "Contesto del progetto"
+6. Questo file (`CLAUDE.md`) — compilare le sezioni "Contesto del progetto"
    e "Scelte tecniche" con i dati reali del progetto
 
 Regole per la compilazione:
@@ -68,6 +73,8 @@ Regole per la compilazione:
 - Rimuovere tutti i commenti HTML `<!-- -->` dei template.
 - Adattare gli esempi al progetto reale, non lasciarli come riferimento generico.
 - Se una sezione non è applicabile al progetto, eliminarla.
+- I file di iterazione devono coprire esattamente le funzionalità dell'MVP definito
+  in `spec.md`. Nessuna iterazione extra, nessuna funzionalità opzionale inclusa.
 
 ### Passo C — Approvazione
 
